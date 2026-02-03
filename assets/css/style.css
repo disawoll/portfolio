@@ -352,7 +352,7 @@ body {
   flex-direction: column;
   gap: 16px;
 }
-.section-header h3 {
+.section-header h2 {
   font-size: 15px;
   font-weight: 700;
   color: var(--text-primary);

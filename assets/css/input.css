@@ -74,7 +74,7 @@ body {
 /* Content & Grid */
 .content { width: var(--content-width); min-width: var(--content-width); flex-shrink: 0; display: flex; flex-direction: column; gap: 40px; }
 .section-container { display: flex; flex-direction: column; gap: 16px; }
-.section-header h3 { font-size: 15px; font-weight: 700; color: var(--text-primary); margin: 0; padding-left: var(--radius); }
+.section-header h2 { font-size: 15px; font-weight: 700; color: var(--text-primary); margin: 0; padding-left: var(--radius); }
 .bento-grid { display: grid; gap: var(--grid-gap); grid-template-columns: repeat(4, 1fr); grid-auto-flow: dense; }
 
 /* Cards */

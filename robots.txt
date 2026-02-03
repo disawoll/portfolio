@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://doganmertguven.com/sitemap.xml

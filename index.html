@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- --- Favicons --- -->
     <title>Doğan Mert Güven | Product Designer</title>
-    <link rel="icon" type="image/png" href="./assets/favicon.png">
-    <link rel="apple-touch-icon" href="./assets/favicon.png">
 
-    <!-- --- Open Graph Meta Tags --- -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+
     <meta name="description" content="Portfolio of Doğan Mert Güven. Product Designer based in Milan, creating digital experiences that matter.">
-    
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://doganmertguven.com/">
     <meta property="og:title" content="Doğan Mert Güven | Product Designer">
     <meta property="og:description" content="View selected works in UI/UX and Interaction Design.">
-    
     <meta property="og:image" content="https://doganmertguven.com/assets/social-preview.png"> 
     
     <meta property="twitter:card" content="summary_large_image">
@@ -28,7 +24,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
-        /* --- CSS Variables & Theme Config --- */
+        /* =========================================
+           Theme Configuration & Variables
+           ========================================= */
         :root {
             /* Layout Dimensions */
             --sidebar-width: 340px;
@@ -70,7 +68,9 @@
             }
         }
 
-        /* --- Global Styles --- */
+        /* =========================================
+           Global Styles
+           ========================================= */
         body { 
             font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
             background-color: var(--bg-color); 
@@ -86,7 +86,7 @@
             gap: clamp(20px, 5vw, var(--main-gap));
         }
 
-        /* --- Sidebar --- */
+        /* Sidebar Styles */
         .sidebar { 
             width: var(--sidebar-width); 
             flex-shrink: 0; 
@@ -107,7 +107,7 @@
         .profile-bio {
             color: var(--text-secondary);
             font-weight: 500;
-            font-size: 1.125rem; /* 18px */
+            font-size: 1.125rem;
             line-height: 1.625;
         }
 
@@ -131,7 +131,7 @@
             padding-left: 2px; text-align: left;
         }
 
-        /* --- Main Content --- */
+        /* Main Content Area */
         .content { 
             width: var(--content-width); 
             min-width: var(--content-width); 
@@ -139,7 +139,7 @@
             display: flex; flex-direction: column; gap: 40px; 
         }
 
-        /* --- Grid System --- */
+        /* Grid System */
         .section-container { display: flex; flex-direction: column; gap: 16px; }
         
         .section-header h3 {
@@ -154,7 +154,7 @@
             grid-auto-flow: dense;
         }
 
-        /* --- Cards --- */
+        /* Card Styles */
         .card {
             background-color: var(--card-bg); 
             border-radius: var(--radius); 
@@ -169,20 +169,19 @@
         .card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); }
         .card:hover img { transform: scale(1.03); }
         
-        /* UPDATED: Removed border-color change on hover */
         .card:hover { 
             transform: translateY(-4px); 
             box-shadow: 0 12px 30px rgba(0,0,0,0.08); 
             z-index: 10; 
         }
 
-        /* --- Grid Sizes --- */
+        /* Grid Item Sizes */
         .size-1x1 { grid-column: span 1; grid-row: span 1; aspect-ratio: 1/1; }
         .size-2x1 { grid-column: span 2; grid-row: span 1; aspect-ratio: 2/1; }
         .size-1x2 { grid-column: span 1; grid-row: span 2; aspect-ratio: 1/2; }
         .size-2x2 { grid-column: span 2; grid-row: span 2; aspect-ratio: 1/1; }
 
-        /* --- Tags --- */
+        /* Floating Tags */
         .tag {
             background: var(--tag-bg); 
             backdrop-filter: blur(8px);
@@ -193,7 +192,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.05); pointer-events: none;
         }
 
-        /* --- Buttons --- */
+        /* Buttons */
         .btn-social {
             width: 100%; height: 56px; 
             background-color: var(--btn-bg);
@@ -211,10 +210,9 @@
         }
         .btn-social:active { transform: scale(0.98); }
 
-        /* ============================================================ */
-        /* --- RESPONSIVE DESIGN --- */
-        /* ============================================================ */
-        
+        /* =========================================
+           Responsive Design
+           ========================================= */
         @media (max-width: 1200px) {
             .wrapper { flex-direction: column; align-items: center; gap: 60px; }
 
@@ -259,7 +257,11 @@
             
             <div class="profile-info">
                 <div class="relative w-40 h-40 mb-6">
-                    <img src="./assets/profile.png" class="w-full h-full rounded-full object-cover shadow-xl border border-gray-100 bg-gray-50" style="border-color: var(--bg-color);" alt="Doğan Mert Güven">
+                    <img src="./assets/profile@1x.webp"
+                         srcset="./assets/profile@1x.webp 1x, ./assets/profile@2x.webp 2x, ./assets/profile@3x.webp 3x"
+                         class="w-full h-full rounded-full object-cover shadow-xl border border-gray-100 bg-gray-50" 
+                         style="border-color: var(--bg-color);" 
+                         alt="Doğan Mert Güven">
                 </div>
                 <h1 class="text-4xl font-extrabold tracking-tight mb-3" style="color: var(--text-primary);">Doğan Mert Güven</h1>
                 
@@ -296,11 +298,15 @@
                 <div class="section-header"><h3>Design Articles</h3></div>
                 <div class="bento-grid">
                     <a href="https://medium.com/moneypay-tech/deals-reimagined-38fab99c06a3" target="_blank" class="card size-2x1">
-                        <img src="./assets/medium2.png" alt="Deals Reimagined">
+                        <img src="./assets/medium2@1x.webp" 
+                             srcset="./assets/medium2@1x.webp 1x, ./assets/medium2@2x.webp 2x, ./assets/medium2@3x.webp 3x" 
+                             alt="Deals Reimagined">
                         <div class="tag">Deals, Reimagined.</div>
                     </a>
                     <a href="https://medium.com/moneypay-tech/building-blocks-of-consistency-the-bento-design-system-story-b79fa8bc3f3d" target="_blank" class="card size-2x1">
-                        <img src="./assets/medium1.png" alt="Design Systems">
+                        <img src="./assets/medium1@1x.webp" 
+                             srcset="./assets/medium1@1x.webp 1x, ./assets/medium1@2x.webp 2x, ./assets/medium1@3x.webp 3x" 
+                             alt="Design Systems">
                         <div class="tag">Bento Design System</div>
                     </a>
                 </div>
@@ -310,27 +316,39 @@
                 <div class="section-header"><h3>UI / UX Design</h3></div>
                 <div class="bento-grid">
                     <a href="https://www.behance.net/gallery/237715353/InStay-Smart-TV" target="_blank" class="card size-2x1">
-                        <img src="./assets/instay.png" alt="InStay">
+                        <img src="./assets/instay@1x.webp" 
+                             srcset="./assets/instay@1x.webp 1x, ./assets/instay@2x.webp 2x, ./assets/instay@3x.webp 3x" 
+                             alt="InStay">
                         <div class="tag">InStay</div>
                     </a>
                     <a href="https://www.behance.net/gallery/238170153/VitalAID-UXUI-for-Emergency-Care" target="_blank" class="card size-2x1">
-                        <img src="./assets/vitalaid.png" alt="VitalAID">
+                        <img src="./assets/vitalaid@1x.webp" 
+                             srcset="./assets/vitalaid@1x.webp 1x, ./assets/vitalaid@2x.webp 2x, ./assets/vitalaid@3x.webp 3x" 
+                             alt="VitalAID">
                         <div class="tag">VitalAID</div>
                     </a>
                     <a href="https://www.behance.net/gallery/232791677/Deals-Page-Redesign-UXUI-Case-Study" target="_blank" class="card size-2x2">
-                        <img src="./assets/moneypay.png" alt="MoneyPay">
+                        <img src="./assets/moneypay@1x.webp" 
+                             srcset="./assets/moneypay@1x.webp 1x, ./assets/moneypay@2x.webp 2x, ./assets/moneypay@3x.webp 3x" 
+                             alt="MoneyPay">
                         <div class="tag">MoneyPay</div>
                     </a>
                     <a href="https://www.behance.net/gallery/181296647/Routiner-UXUI-Case-Study" target="_blank" class="card size-2x1">
-                        <img src="./assets/routiner.png" alt="Routiner">
+                        <img src="./assets/routiner@1x.webp" 
+                             srcset="./assets/routiner@1x.webp 1x, ./assets/routiner@2x.webp 2x, ./assets/routiner@3x.webp 3x" 
+                             alt="Routiner">
                         <div class="tag">Routiner</div>
                     </a>
                     <a href="https://www.behance.net/gallery/180628229/CHUG-UXUI-Case-Study" target="_blank" class="card size-2x2">
-                        <img src="./assets/chug.png" alt="Chug">
+                        <img src="./assets/chug@1x.webp" 
+                             srcset="./assets/chug@1x.webp 1x, ./assets/chug@2x.webp 2x, ./assets/chug@3x.webp 3x" 
+                             alt="Chug">
                         <div class="tag">Chug</div>
                     </a>
                     <a href="https://www.behance.net/gallery/179890137/Artwise-UXUI-Case-Study" target="_blank" class="card size-2x1">
-                        <img src="./assets/artwise.png" alt="Artwise">
+                        <img src="./assets/artwise@1x.webp" 
+                             srcset="./assets/artwise@1x.webp 1x, ./assets/artwise@2x.webp 2x, ./assets/artwise@3x.webp 3x" 
+                             alt="Artwise">
                         <div class="tag">Artwise</div>
                     </a>
                 </div>
@@ -340,15 +358,21 @@
                 <div class="section-header"><h3>Industrial Design</h3></div>
                 <div class="bento-grid">
                     <a href="https://www.behance.net/gallery/152644801/Purific-Sustainable-Air-Purifier" target="_blank" class="card size-2x2">
-                        <img src="./assets/purific.png" alt="Purific">
+                        <img src="./assets/purific@1x.webp" 
+                             srcset="./assets/purific@1x.webp 1x, ./assets/purific@2x.webp 2x, ./assets/purific@3x.webp 3x" 
+                             alt="Purific">
                         <div class="tag">Purific</div>
                     </a>
                     <a href="https://www.behance.net/gallery/130941415/CampDuo-Portable-Heating-Power" target="_blank" class="card size-1x2">
-                        <img src="./assets/campduo.png" alt="CampDuo">
+                        <img src="./assets/campduo@1x.webp" 
+                             srcset="./assets/campduo@1x.webp 1x, ./assets/campduo@2x.webp 2x, ./assets/campduo@3x.webp 3x" 
+                             alt="CampDuo">
                         <div class="tag">CampDuo</div>
                     </a>
                     <a href="https://www.behance.net/gallery/149260695/Canely-Walking-Stick" target="_blank" class="card size-1x2">
-                        <img src="./assets/canely.png" alt="Canely">
+                        <img src="./assets/canely@1x.webp" 
+                             srcset="./assets/canely@1x.webp 1x, ./assets/canely@2x.webp 2x, ./assets/canely@3x.webp 3x" 
+                             alt="Canely">
                         <div class="tag">Canely</div>
                     </a>
                 </div>
@@ -358,16 +382,24 @@
                 <div class="section-header"><h3>3D Art</h3></div>
                 <div class="bento-grid">
                     <a href="https://www.behance.net/gallery/190069917/Head-Sculpting-Practice" target="_blank" class="card size-2x1">
-                        <img src="./assets/3d_1.png" alt="Head Sculpting">
+                        <img src="./assets/3d_1@1x.webp" 
+                             srcset="./assets/3d_1@1x.webp 1x, ./assets/3d_1@2x.webp 2x, ./assets/3d_1@3x.webp 3x" 
+                             alt="Head Sculpting">
                     </a>
                     <a href="https://www.behance.net/gallery/189926875/Darth-Grogu-Sculpture" target="_blank" class="card size-2x2">
-                        <img src="./assets/3d_2.png" alt="Darth Grogu">
+                        <img src="./assets/3d_2@1x.webp" 
+                             srcset="./assets/3d_2@1x.webp 1x, ./assets/3d_2@2x.webp 2x, ./assets/3d_2@3x.webp 3x" 
+                             alt="Darth Grogu">
                     </a>
                     <a href="https://www.behance.net/gallery/189928187/Blender-Donut-Animation" target="_blank" class="card size-2x2">
-                        <img src="./assets/3d_3.png" alt="Blender Donut">
+                        <img src="./assets/3d_3@1x.webp" 
+                             srcset="./assets/3d_3@1x.webp 1x, ./assets/3d_3@2x.webp 2x, ./assets/3d_3@3x.webp 3x" 
+                             alt="Blender Donut">
                     </a>
                     <a href="https://www.behance.net/gallery/143715987/LEGO-Crane-Truck-Rendering" target="_blank" class="card size-2x1">
-                        <img src="./assets/3d_4.png" alt="LEGO Crane Truck">
+                        <img src="./assets/3d_4@1x.webp" 
+                             srcset="./assets/3d_4@1x.webp 1x, ./assets/3d_4@2x.webp 2x, ./assets/3d_4@3x.webp 3x" 
+                             alt="LEGO Crane Truck">
                     </a>
                 </div>
             </div>

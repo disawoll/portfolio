@@ -1,0 +1,25 @@
+{
+  "name": "doganmertguven.com",
+  "version": "1.0.0",
+  "description": "Personal portfolio website showcasing my work in Product & Interaction Design.<br> Built simply with HTML & CSS.<br> ✨ Vibe Coded with Gemini",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/disawoll/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/disawoll/portfolio/issues"
+  },
+  "homepage": "https://github.com/disawoll/portfolio#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  }
+}
